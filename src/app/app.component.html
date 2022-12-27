@@ -1,0 +1,35 @@
+<h1>Password Generator</h1>
+
+<div>
+<label>Enter Length</label>
+<input (input) = "onChangeLength()" type="number" [formControl]="useLength"/>
+</div>
+
+<div>
+  <label >Use Letters </label>
+  <input type="checkbox" [formControl]="useLetter"/>
+
+</div>
+
+<div>
+  <label>Use Numbers </label>
+  <input type="checkbox" [formControl]="useNumber"/>
+</div>
+
+<div>
+  <label>Use Symbols </label>
+  <input type="checkbox" [formControl]="useSymbols" />
+</div>
+
+<div>
+
+  <button (click)="onButtonClick()">Generate</button>
+</div>
+
+<div>
+
+  <label>Your Password </label>
+  <input [value]="password"/>
+</div>
+
+{{length}}
