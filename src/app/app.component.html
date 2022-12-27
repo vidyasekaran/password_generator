@@ -1,4 +1,4 @@
-<!--<h1>Password Generator</h1>
+<h1>Password Generator</h1>
 
 <div>
 <label>Enter Length</label>
@@ -23,7 +23,7 @@
 
 <div>
 
-  <button (click)="onButtonClick()">Generate</button>
+  <button [disabled] ="!(length && (useLength.value && ( useLetter.value || useNumber.value || useSymbols.value)))" (click)="onButtonClick()">Generate</button>
 </div>
 
 <div>
@@ -32,6 +32,6 @@
   <input [value]="password"/>
 </div>
 
-{{length}}-->
+{{length}}
 
 <app-login></app-login>
